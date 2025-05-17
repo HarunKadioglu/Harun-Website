@@ -42,20 +42,40 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (galleryItems.length > 0 && galleryModal) {
             const galleryArray = Array.from(galleryItems);
+            const modal = new bootstrap.Modal(galleryModal, {
+                backdrop: true,
+                keyboard: true
+            });
 
             const updateModal = (index) => {
                 const img = galleryArray[index].querySelector('.gallery-image');
                 const caption = galleryArray[index].querySelector('.image-caption');
                 
                 galleryModalImg.src = img.src;
+                galleryModalImg.alt = img.alt;
                 modalCaption.textContent = caption.textContent;
                 currentIndex = index;
             };
 
+            // Modal kapanma olayını dinle
+            galleryModal.addEventListener('hidden.bs.modal', function () {
+                document.body.classList.remove('modal-open');
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+                const backdrop = document.querySelector('.modal-backdrop');
+                if (backdrop) {
+                    backdrop.remove();
+                }
+            });
+
+            // Modal açılma olayını dinle
+            galleryModal.addEventListener('show.bs.modal', function () {
+                document.body.style.overflow = 'hidden';
+            });
+
             galleryItems.forEach((item, index) => {
                 item.addEventListener('click', function() {
                     updateModal(index);
-                    const modal = new bootstrap.Modal(galleryModal);
                     modal.show();
                 });
             });
@@ -80,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         prevBtn.click();
                     } else if (event.key === 'ArrowRight') {
                         nextBtn.click();
+                    } else if (event.key === 'Escape') {
+                        modal.hide();
                     }
                 }
             });
