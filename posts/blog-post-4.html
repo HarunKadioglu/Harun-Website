@@ -1,0 +1,140 @@
+<!-- posts/blog-post-4.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog 4 - Harun Kadıoğlu</title>
+        
+        <!-- CSS Files -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLEVJ2Q9T0"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-YLEVJ2Q9T0');
+        </script>
+    </head>
+    <body>
+        <div class="page-container">
+            <!-- Header -->
+            <header class="header">
+                <nav class="navbar navbar-expand-lg fixed-top">
+                    <div class="container">
+                        <a class="navbar-brand" href="../index.html">Harun Kadıoğlu</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="../index.html">Mainpage</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../blog.html">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Blog Content -->
+            <section class="blog-post-section">
+                <div class="container">
+                    <div class="blog-post">
+                        <div class="blog-post-header">
+                            <h1>Thinking Like a Tester</h1>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar-alt"></i> June 12, 2026</span>
+                                <span class="post-category"><i class="fas fa-folder"></i> Software Testing</span>
+                            </div>
+                        </div>
+
+                        <div class="blog-post-image">
+                            <img src="../images/blog/blog-4-a.png" alt="Thinking Like a Tester" class="img-fluid">
+                        </div>
+
+                        <div class="blog-post-content">
+
+                            <p>When software testing is mentioned, many people immediately think of opening an application, navigating through a few screens, and reporting the bugs they encounter. However, what distinguishes a successful tester from others is not only the ability to find defects, but also the way they think. Testing is, above all, a mindset.</p>
+
+                            <p>A tester never tries to prove that a system works correctly. Instead, they focus on discovering the conditions under which the system may behave unexpectedly. This is why testers are often among the people who ask the most questions—and sometimes the most unexpected ones—within a project team.</p>
+
+                            <p>A developer typically focuses on making a feature or system work as intended. They implement the requirements and verify that the expected outcome is achieved. A tester, on the other hand, approaches the same feature from a different perspective:</p>
+
+                            <ul>
+                                <li>Does this feature really work correctly?</li>
+                                <li>What happens if the user follows a different path?</li>
+                                <li>How does the system behave when unexpected data is entered?</li>
+                                <li>Are there any missing or conflicting requirements?</li>
+                                <li>Could this change affect another feature?</li>
+                                <li>What can I do to break the system?</li>
+                            </ul>
+
+                            <p>For this reason, a tester's responsibility is not limited to using the product and verifying requirements. Their job is also to question the product, identify weaknesses, and uncover potential risks.</p>
+
+                            <p>One of the most common mistakes in software projects is focusing only on expected scenarios. Consider a simple money transfer screen. The happy path is straightforward:</p>
+
+                            <ol>
+                                <li>The user selects an account.</li>
+                                <li>The user enters the recipient's IBAN.</li>
+                                <li>The user enters the transfer amount.</li>
+                                <li>The transfer is completed.</li>
+                            </ol>
+
+                            <p>If this scenario works successfully, many people would assume that the feature is functioning correctly. A good tester, however, does not stop there and begins exploring other possibilities:</p>
+
+                            <ul>
+                                <li>Can letters be entered into the amount field?</li>
+                                <li>Can a negative value be entered?</li>
+                                <li>What happens if the daily transfer limit is exceeded?</li>
+                                <li>What happens if the internet connection is lost during the transaction?</li>
+                                <li>What happens if the same transaction is submitted twice simultaneously?</li>
+                            </ul>
+
+                            <p>Real defects are often found not in the expected scenarios, but in the answers to these questions.</p>
+
+                            <p>In large projects, testing every possible combination is rarely feasible. Time and resource constraints make it necessary to prioritize testing efforts. This is where risk-based thinking becomes essential.</p>
+
+                            <p>For example, in a banking application, a defect in the money transfer functionality carries a much higher risk than a defect in the profile picture update feature. Experienced testers focus their time and effort on the areas that present the greatest risk. This approach not only improves testing efficiency but also helps identify critical issues much earlier.</p>
+
+                            <p>One of the most important qualities a tester can possess is curiosity. Curious testers constantly ask questions such as:</p>
+
+                            <ul>
+                                <li>Why does it work this way?</li>
+                                <li>What business rule is behind this behavior?</li>
+                                <li>What happens if the user interacts with it differently?</li>
+                                <li>Which other systems or features could be affected by this change?</li>
+                            </ul>
+
+                            <p>Many serious defects are not caused by a lack of technical knowledge, but by a lack of questioning.</p>
+
+                            <p>In the end, software testing is much more than executing an application and reporting bugs. Thinking like a tester means questioning assumptions, evaluating risks, considering different perspectives, and actively searching for weaknesses within a system. Technical skills can be learned over time. Testing tools may change, and methodologies may evolve. However, a strong testing mindset remains one of the most valuable assets a tester can develop throughout their career.</p>
+
+                            <p>Because great testers do more than find defects—they develop the way of thinking that makes those defects visible in the first place.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>
+```
